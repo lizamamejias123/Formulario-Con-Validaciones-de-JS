@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Reserva de Hora</title>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
+</head>
+
+<body class="bg-light">
+
+    <div class="container my-5">
+        <h1 class="display-5 font-weight-bold mb-3">Reserva de Hora</h1>
+        <h3 class="display-5 font-weight-bold mb-3">Centro Medico</h3>
+        <hr>
+        <!-- Se puede utilizar el onclick, pero tambien podemos utilizar el addEventListener desde javascript -->
+        <!-- <button type="button" class="btn btn-primary btn-lg" id="boton" onclick="cambiarColor()">Presioname</button> -->
+    </div>
+
+    <div class="container my-5">
+
+        <form action="" method="POST" id="formulario" onsubmit="return false;">
+
+            <div class="form-group">
+                <label for="rut">Rut</label>
+                <input type="text" class="form-control" id="rut">
+                <div class="alert alert-danger my-2" role="alert" id="error_rut">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" class="form-control" id="nombre">
+                <div class="alert alert-danger my-2" role="alert" id="error_nombre">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="apellidos">Apellidos</label>
+                <input type="text" class="form-control" id="apellidos">
+                <div class="alert alert-danger my-2" role="alert" id="error_apellidos">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="edad">Edad</label>
+                <input type="text" class="form-control" id="edad">
+                <div class="alert alert-danger my-2" role="alert" id="error_edad">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="text" class="form-control" id="email">
+                <div class="alert alert-danger my-2" role="alert" id="error_email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="especialidad">Especialidad</label>
+                <select type="list" class="form-control" id="especialidad">
+					<option>Traumatología</option>
+					<option>Dental</option>
+					<option>Radiología</option> 
+				</select>
+
+            </div>
+            <div class="form-group">
+                <label for="fecha">Fecha</label>
+                <input type="text" class="form-control" id="fecha">
+                <div class="alert alert-danger my-2" role="alert" id="error_fecha">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="time">Hora</label>
+                <select type="list" class="form-control" id="hora">
+					<option value="1">09:00</option>
+					<option value="2">10:30</option>
+					<option value="3">10:00</option> 
+				</select>
+            </div>
+
+            <input type="submit" value="Reservar" id="submit" class="btn btn-primary">
+
+        </form>
+
+
+
+    </div>
+    <script src="assets/js/script.js"></script>
+</body>
+
+</html>
